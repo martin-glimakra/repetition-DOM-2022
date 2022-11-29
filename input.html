@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>input</title>
+</head>
+
+<body>
+    <input type="text" id="martin-input">
+    <button id="log-value">Log input value</button>
+
+    <script>
+        function martinsLogFunktion() {
+            console.log(document.getElementById("martin-input").value)
+        }
+        document.getElementById("log-value").addEventListener("click", martinsLogFunktion)
+    </script>
+</body>
+
+</html>
