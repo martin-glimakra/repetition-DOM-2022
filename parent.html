@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parent</title>
+</head>
+<body>
+    <div id="myList">
+
+    </div>
+    <script>
+        function myFunction(input) {
+
+        // Create an "li" node:
+        const node = document.createElement("button");
+
+        // // Create a text node:
+        const textnode = document.createTextNode(input);
+
+        // // Append the text node to the "li" node:
+        node.appendChild(textnode);
+        node.addEventListener("click", martinsFunktion)
+
+        function martinsFunktion (event) {
+            console.log(event.target)
+            console.log(event.target.parentElement)
+        }
+
+        // Append the "li" node to the list:
+        document.getElementById("myList").appendChild(node);
+}   
+
+myFunction(1)
+myFunction(2)
+myFunction(3)
+
+</script>
+</body>
+</html>
