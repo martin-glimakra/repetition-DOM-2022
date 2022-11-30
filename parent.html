@@ -15,21 +15,27 @@
 
         // Create an "button" node:
         const node = document.createElement("button");
+            
+        // Create an "div" node:
+        const parentNode = document.createElement("div");
+
 
         // // Create a text node:
         const textnode = document.createTextNode(input);
 
-        // // Append the text node to the "li" node:
+        // // Append the text node to the "button" node:
         node.appendChild(textnode);
         node.addEventListener("click", martinsFunktion)
 
         function martinsFunktion (event) {
             console.log(event.target)
             console.log(event.target.parentElement)
+            event.target.parentElement.remove()
+
         }
 
         // Append the "button" node to the list:
-        document.getElementById("myList").appendChild(node);
+        document.getElementById("myList").appendChild(parentNode).appendChild(node);
 }   
 
 myFunction(1)
